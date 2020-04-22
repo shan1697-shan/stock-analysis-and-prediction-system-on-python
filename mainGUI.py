@@ -16,6 +16,8 @@ window.title("stock analysis and prediction system")
 window.iconbitmap('C:\\Users\\91727\\PycharmProjects\\majorproj\\958613.png')
 window.geometry('700x460')
 window.configure(background='turquoise')
+message = tk.Label(window, text = "Stock Analysis and Prediction System", bg="Green",fg="White",width=60,height=2, font=('times',14,'italic bold underline'))
+message.place(x=10, y=5)
 
 def open_file():
     pth.clear()
@@ -32,7 +34,7 @@ def open_file():
     # v=open_file().name
 
 
-buttonbrows = tk.Button(window, text='Browse', width=13, height=1, command=open_file).place(x=510, y=11)
+buttonbrows = tk.Button(window, text='Browse', width=13, height=1, command=open_file).place(x=510, y=54)
 
 df=[]
 
@@ -46,10 +48,10 @@ def readcsv():
 
 
 readbutn= tk.Button(window, text='Read File', width=25, height=2, command=readcsv)
-readbutn.place(x=250, y=50)
+readbutn.place(x=250, y=94)
 
 field = tk.Text(window, width=60, height=1)
-field.place(x=14, y=12)
+field.place(x=14, y=56)
 # field.delete(0.0)
 field.insert(0.0, pth[:-1])
 
@@ -61,19 +63,19 @@ def genrpt():
     fg.funtable(pframe[-1])
 
 
-buttonan = tk.Button(window, text="Analyse", width=25, height=2, command=genrpt).place(x=250, y=120)
+buttonan = tk.Button(window, text="Analyse", width=25, height=2, command=genrpt).place(x=250, y=164)
 
 def gpyrpt():
     gr.greport(pframe[0])
 
-buttongrp = tk.Button(window, text="Graphical Report", width=25, height=2, command=gpyrpt).place(x=250, y=190)
+buttongrp = tk.Button(window, text="Graphical Report", width=25, height=2, command=gpyrpt).place(x=250, y=234)
 
 def predt():
     pre.predict(df[0])
 
-buttonpre=tk.Button(window, text='Predict', width=25, height=2, command=predt).place(x=250,y=265)
+buttonpre=tk.Button(window, text='Predict', width=25, height=2, command=predt).place(x=250,y=309)
 
-buttonexit = tk.Button(window, text='EXIT', width=25, height=2, command=window.destroy).place(x=250, y=345)
+buttonexit = tk.Button(window, text='EXIT', width=25, height=2, command=window.destroy).place(x=250, y=389)
 
 window.resizable(False,False)
 
