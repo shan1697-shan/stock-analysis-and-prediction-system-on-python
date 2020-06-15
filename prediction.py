@@ -113,7 +113,7 @@ def predict(impframe):
     graph=dframe1.head(25)
     graph.plot(kind='bar')
 
-    plt.show()
+#     plt.show()
     # if check == True:
     #     print("model trained successfully")
     #
