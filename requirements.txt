@@ -4,7 +4,7 @@ cycler==0.10.0
 DateTime==4.3
 future==0.18.2
 idna==2.9
-joblib==0.14.1
+joblib==1.2.0
 kiwisolver==1.1.0
 lxml==4.6.2
 matplotlib==3.2.0
